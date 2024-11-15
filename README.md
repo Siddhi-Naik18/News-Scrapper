@@ -3,7 +3,7 @@
 This project is a web scraper that collects the latest news articles from Google News across categories like Sports, Entertainment, and Law. It uses requests and BeautifulSoup to gather article titles, snippets, and links. For detailed content, Selenium is employed to scrape each article. The project also integrates sentiment analysis to classify articles as positive, negative, or neutral based on their content.
 
 ## 📊 Key Features
-- Web Scraping with requests and BeautifulSoup: Used the requests library to send HTTP requests and BeautifulSoup for parsing HTML content from Google News across multiple categories like Sports, Entertainment, and Law.
+- Web Scraping with requests and BeautifulSoup: Used the requests library to send HTTP requests and BeautifulSoup for parsing HTML content from Google News across multiple categories like Sports, Entertainment, Health, Technology, Business, and Law. 
 - Article Collection: Extracted article titles and links, ensuring only the most recent articles are fetched. The number of articles fetched can be adjusted based on user preference.
 - Selenium for Detailed Scraping: Utilized Selenium to scrape detailed article content for sentiment analysis.
 - Sentiment Analysis with TextBlob: Used TextBlob for sentiment analysis to classify each article’s tone as positive, negative, or neutral.
