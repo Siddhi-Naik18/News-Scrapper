@@ -2,6 +2,7 @@ import streamlit as st
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+import pathlib
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
@@ -104,10 +105,18 @@ def get_entertain_news(limit):
     driver.quit()  # Close the Selenium driver after scraping
     return newslist
 
+def load_css(file_path):
+    with open(file_path) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
 # Convert news list to CSV
 def convert_to_csv(newslist):
     df = pd.DataFrame(newslist)
     return df.to_csv(index=False).encode('utf-8')
+
+# # Load the external CSS
+css_path = pathlib.Path("styles/style.css")
+load_css(css_path)
 
 # Streamlit app interface
 st.title("🎭 Entertainment News Scraper")
