@@ -136,6 +136,7 @@ def icon(icon_name):
 remote_css('https://fonts.googleapis.com/icon?family=Material+Icons')
 
 icon("search")
+st.subheader("Keyword Search:")
 keyword = st.text_input("")
 
 if st.button("Search", key="submit"):
